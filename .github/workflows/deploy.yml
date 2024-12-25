@@ -15,7 +15,7 @@ jobs:
         with:
           caching: 'false'
       - name: ouput info
-        run: echo "Cache used ${{ steps.netha.outputs.used-cache }}"
+        run: echo "Cache used '${{ steps.netha.outputs.used-cache }}'"
       - name: Lint code
         run: npm run lint
   test:
