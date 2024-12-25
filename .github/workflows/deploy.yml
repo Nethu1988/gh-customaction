@@ -10,12 +10,12 @@ jobs:
       - name: Get code
         uses: actions/checkout@v3
       - name: Load and cache dependencies
-        id: cache-deps
+        id: netha
         uses: ./.github/actions/cache-deps
         with:
           caching: 'false'
       - name: ouput info
-        run: echo "Cache used? ${{ steps.cache-deps.outputs.used-cache }}"
+        run: echo "Cache used? ${{ steps.netha.outputs.used-cache }}"
       - name: Lint code
         run: npm run lint
   test:
